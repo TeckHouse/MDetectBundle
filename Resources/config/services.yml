@@ -1,0 +1,17 @@
+parameters:
+    teckhouse_mdetect.wrapper_class: TeckHouse\MDetectBundle\MDetect\MDetect
+
+services:
+    teckhouse_mdetect.wrapper:
+        class: %teckhouse_mdetect.wrapper_class%
+        
+#    teckhouse_mdetect.request_listener:
+#        class: TeckHouse\EventListener\RequestListener
+#        tags:
+#          - { name: kernel.event_listener, event: kernel.request, method: setDeviceType }
+#        arguments:  
+#            wrapper: "@teckhouse_mdetect.wrapper"
+        
+    teckhouse_mdetect:
+        class: %teckhouse_mdetect.wrapper_class%
+            
