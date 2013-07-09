@@ -9,6 +9,12 @@
         {
             "name": "Mauro Foti",
             "email": "m.foti@teckhouse.com"
+        },
+        {
+            "name": "Vito Tardia",
+            "email": "info@vtardia.com",
+            "homepage": "http://vtardia.com",
+            "role": "Developer"
         }
     ],
     "require": {
