@@ -25,7 +25,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('teckhouse_mdetect');
+        $rootNode = $treeBuilder->root('teck_house_m_detect');
 
         $rootNode
             ->children()
