@@ -37,7 +37,7 @@ class MDetect {
     
     public function isTablet()
     {
-        return $this->isMobile() ? $this->uagent->DetectTierTablet() : false;
+        return $this->uagent->DetectTierTablet();
     }
     
     public function detectDevice()
