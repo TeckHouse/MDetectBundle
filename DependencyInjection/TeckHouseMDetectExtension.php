@@ -31,10 +31,10 @@ class TeckHouseMDetectExtension extends Extension
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
 
-        if ($config['inject_in_request']) {
+        if ($config['inject_value']) {
             $container
-                ->register('teckhouse_mdetect.request_listener', 'TeckHouse\MDetectBundle\EventListener\RequestListener')
-                ->addTag('kernel.event_listener', array('event' => 'kernel.request', 'method' => 'setDeviceType'))
+                ->register('teckhouse_mdetect.request_listener', 'TeckHouse\MDetectBundle\EventListener\InjectionListener')
+                ->addTag('kernel.event_listener', array('event' => 'kernel.controller', 'method' => 'setDeviceType'))
                 ->addArgument(new Reference('teckhouse_mdetect.wrapper'))
             ;
         }

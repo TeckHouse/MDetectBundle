@@ -12,13 +12,13 @@
 namespace TeckHouse\MDetectBundle\EventListener;
 
 use TeckHouse\MDetectBundle\MDetect\MDetect;
-use Symfony\Component\HttpKernel\Event\GetResponseEvent;
+use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
 use Symfony\Component\HttpKernel\HttpKernel;
 
 /**
  * @author Mauro Foti <m.foti@teckhouse.com>
  */
-class RequestListener {
+class InjectionListener {
     
     protected $mdetect;
 
@@ -27,7 +27,7 @@ class RequestListener {
         $this->mdetect = $mdetect;
     }
     
-    public function setDeviceType(GetResponseEvent $event) {
+    public function setDeviceType(FilterControllerEvent $event) {
         
         if (HttpKernel::MASTER_REQUEST == $event->getRequestType()) {
             

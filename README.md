@@ -43,7 +43,7 @@ in config.yml:
 
 ```
 teckhouse_mdetect:
-    inject_in_request: [ true | false ]
+    inject_value: [ true | false ]
 ```
 
 # Usage

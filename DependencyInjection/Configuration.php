@@ -29,7 +29,7 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->booleanNode('inject_in_request')->defaultFalse()->end()
+                ->booleanNode('inject_value')->defaultFalse()->end()
             ->end()
         ;
 
