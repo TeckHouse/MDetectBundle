@@ -4,14 +4,9 @@ parameters:
 services:
     teckhouse_mdetect.wrapper:
         class: %teckhouse_mdetect.wrapper_class%
-        
-#    teckhouse_mdetect.request_listener:
-#        class: TeckHouse\EventListener\RequestListener
-#        tags:
-#          - { name: kernel.event_listener, event: kernel.request, method: setDeviceType }
-#        arguments:  
-#            wrapper: "@teckhouse_mdetect.wrapper"
-        
-    teckhouse_mdetect:
-        class: %teckhouse_mdetect.wrapper_class%
-            
+                
+    teckhouse_mdetect.twig.device_detect_extension:
+        class: TeckHouse\MDetectBundle\Twig\DeviceDetectExtension
+        arguments: ["@teckhouse_mdetect.wrapper"]
+        tags:
+            - { name: twig.extension }

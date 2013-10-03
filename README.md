@@ -61,3 +61,9 @@ If the injection is setted to "off" you can use the service to get infos about t
 ```
 $this->get('teckhouse_mdetect.wrapper');
 ```
+
+In any case you can use Twig filter extension to retrive the status in template:
+
+```
+{{ getDeviceType() }}
+```
